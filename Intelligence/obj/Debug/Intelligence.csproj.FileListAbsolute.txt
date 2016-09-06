@@ -1,0 +1,14 @@
+D:\M.Shtoda\Intelligence\bin\Debug\Intelligence.exe.config
+D:\M.Shtoda\Intelligence\bin\Debug\Intelligence.exe
+D:\M.Shtoda\Intelligence\bin\Debug\Intelligence.pdb
+D:\M.Shtoda\Intelligence\obj\Debug\Intelligence.csprojResolveAssemblyReference.cache
+D:\M.Shtoda\Intelligence\obj\Debug\MainWindow.g.cs
+D:\M.Shtoda\Intelligence\obj\Debug\App.g.cs
+D:\M.Shtoda\Intelligence\obj\Debug\Intelligence_MarkupCompile.cache
+D:\M.Shtoda\Intelligence\obj\Debug\Intelligence_MarkupCompile.lref
+D:\M.Shtoda\Intelligence\obj\Debug\MainWindow.baml
+D:\M.Shtoda\Intelligence\obj\Debug\Intelligence.g.resources
+D:\M.Shtoda\Intelligence\obj\Debug\Intelligence.Properties.Resources.resources
+D:\M.Shtoda\Intelligence\obj\Debug\Intelligence.csproj.GenerateResource.Cache
+D:\M.Shtoda\Intelligence\obj\Debug\Intelligence.exe
+D:\M.Shtoda\Intelligence\obj\Debug\Intelligence.pdb
