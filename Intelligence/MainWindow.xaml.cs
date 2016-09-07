@@ -19,51 +19,33 @@ namespace Intelligence {
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window {
-        int ball;
-        List<OneVopros> Lopros;
-        string[] Vop;        
-        int count_true;
-        int count_now;
-        int nowLop = 0;
+        Global global;
+        bool end = false;
         public MainWindow() {
             InitializeComponent();
-            Lopros = new List<OneVopros>();
-            ball = 0;
-            count_true = 0;
-            count_now = 0;
-            String path = System.Reflection.Assembly.GetExecutingAssembly().Location;
-            Console.WriteLine(path);
-            Vop = File.ReadAllLines(path);
-            for (int i = 0; i < Vop.Count(); i++) {
-                string[] str = Vop[i].Split(',');
-                Lopros.Add(new OneVopros(str[0],Convert.ToBoolean(str[1])));
-            }
-            
-            
-            Restart();
+            global = new Global(Opros);
+            global.addVopros(new OneVopros(4,0, "Kto tyt", new string[] { "1", "2", "3", "4" }, new bool[] { false, true, false, false }));
+            global.addVopros(new OneVopros(2,1, "Kto tam", new string[] { "1", "2", "3", "4" }, new bool[] { true, false, false, false }));
+            global.addVopros(new OneVopros(6,2, "Kto snizu", new string[] { "1", "2", "3", "4" }, new bool[] { false, false, true, false }));
+            global.Start();
+            CountQuest.Content = global.GetNow() + "/" + global.GetCount();
+            TrueQuests.Content = global.GetTrue() + "/" + global.GetNow();
         }
-        public void Restart() {
-            if (nowLop<= Lopros.Count-5) {
-                Opros.Children.Clear();
-                for (int i = nowLop; i < nowLop + 3; i++) {
-                    Opros.Children.Add(Lopros[i].GetElemetDock());
-                    nowLop++;
-                }
-            }
+        public void End() {
+            Opros.Children.Add(new Label() {Content="Вы ответили на "+ global.GetCount()+" вопросов" });
+            Opros.Children.Add(new Label() { Content = "Вы ответили правильно на " + global.GetTrue() + " вопросов" });
+            Opros.Children.Add(new Label() { Content = "Вы получили балов " + global.GetNowBal()+"/" + global.GetMaxBall() });
         }
         private void Ok_Vopros(object sender, RoutedEventArgs e) {
-            
-            for (int i = 0; i < Lopros.Count; i++) {
-                if(Lopros[i].GetBox()==Lopros[i].GetCheck()) {
-                    count_now++;
-                }
+            global.StartOtvet();
+            CountQuest.Content = global.GetNow() + "/" + global.GetCount(); 
+            TrueQuests.Content = global.GetTrue() + "/" + global.GetNow();
+
+            if (global.IsEnd() == true && end == false) {
+                End();
+                end = true;
             }
-            if(count_now== count_true) {
-                ball += count_now;
-            } else {
-                ball -= count_now - count_true;
-            }
-            Restart();
+
         }
     }
 }
