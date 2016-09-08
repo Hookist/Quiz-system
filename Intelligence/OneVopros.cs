@@ -9,7 +9,7 @@ namespace Intelligence {
   public   class OneVopros {
         StackPanel stakPanel = new StackPanel();
         Label Quest = new Label();
-      //  DockPanel dockPanel = new DockPanel();       
+       List< DockPanel> dockPanel = new List<DockPanel>();       
         List<CheckBox> checkBox = new List<CheckBox>();
         List<Label> textVop = new List<Label>();
         int idQuest = 0;
@@ -22,12 +22,22 @@ namespace Intelligence {
             stakPanel.Children.Add(Quest);
             for (int i = 0; i < vop.Count(); i++) {
                 textVop.Add(new Label() { Content = vop[i]} );
+                textVop[i].HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
+                textVop[i].VerticalAlignment = System.Windows.VerticalAlignment.Top;
+                textVop[i].Padding = new System.Windows.Thickness(10,0,0,0);
                 checkBox.Add(new CheckBox());
+                checkBox[i].Height = 30;
                 check.Add(otv[i]);
-                stakPanel.Children.Add(checkBox.Last());
-                stakPanel.Children.Add(textVop.Last());
+                dockPanel.Add(new DockPanel());
+                dockPanel[i].HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
+                dockPanel[i].VerticalAlignment = System.Windows.VerticalAlignment.Top;
+                
+
+                dockPanel[i].Children.Add(checkBox.Last());
+                dockPanel[i].Children.Add(textVop.Last());
+                stakPanel.Children.Add(dockPanel[i]);
             }
-//stakPanel.Children.Add(dockPanel);
+
 
         }
         public StackPanel GetElemetStack() {

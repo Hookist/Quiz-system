@@ -24,7 +24,7 @@ namespace Intelligence {
         public MainWindow() {
             InitializeComponent();
             global = new Global(Opros);
-            global.addVopros(new OneVopros(4,0, "Kto tyt", new string[] { "1", "2", "3", "4" }, new bool[] { false, true, false, false }));
+            global.addVopros(new OneVopros(4,0, "Kto tyt", new string[] { "111111111111111111", "22222222222222222222", "33333333333333333333", "444444444444444444444" }, new bool[] { false, true, false, false }));
             global.addVopros(new OneVopros(2,1, "Kto tam", new string[] { "1", "2", "3", "4" }, new bool[] { true, false, false, false }));
             global.addVopros(new OneVopros(6,2, "Kto snizu", new string[] { "1", "2", "3", "4" }, new bool[] { false, false, true, false }));
             global.Start();
@@ -46,6 +46,12 @@ namespace Intelligence {
                 end = true;
             }
 
+        }
+
+        private void Change_Click(object sender, RoutedEventArgs e) {
+            Menu m = new Menu();
+            m.Visibility= Visibility.Visible;
+            this.Close();
         }
     }
 }

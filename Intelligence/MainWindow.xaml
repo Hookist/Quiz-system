@@ -7,12 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525" MaxHeight="350" MaxWidth="525" MinHeight="350" MinWidth="525">
     <Grid>
-        <StackPanel Name="Opros" HorizontalAlignment="Left" Height="215" Margin="10,10,0,0" VerticalAlignment="Top" Width="497"/>
+        <StackPanel Name="Opros" HorizontalAlignment="Left" Height="215" Margin="10,10,0,0" VerticalAlignment="Top" Width="497">
+           
+
+
+
+
+        </StackPanel>
         <Button x:Name="button" Content="OK" HorizontalAlignment="Left" Margin="220,255,0,0" VerticalAlignment="Top" Width="75" Click="Ok_Vopros"/>
         <Label x:Name="label" Content="Вопросов " HorizontalAlignment="Left" Margin="10,237,0,0" VerticalAlignment="Top"/>
         <Label x:Name="CountQuest" Content="0\0" HorizontalAlignment="Left" Margin="82,237,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label1" Content="Правильно" HorizontalAlignment="Left" Margin="10,263,0,0" VerticalAlignment="Top" Width="72"/>
         <Label x:Name="TrueQuests" Content="0\0" HorizontalAlignment="Left" Margin="87,263,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Change" Content="Change" HorizontalAlignment="Left" Margin="439,269,0,0" VerticalAlignment="Top" Width="75" Click="Change_Click"/>
 
     </Grid>
 </Window>
