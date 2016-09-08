@@ -1,0 +1,9 @@
+D:\Git\Projects\Quiz-system-master\Quiz-system-master\TestEdittor\bin\Debug\TestEdittor.exe.config
+D:\Git\Projects\Quiz-system-master\Quiz-system-master\TestEdittor\bin\Debug\TestEdittor.exe
+D:\Git\Projects\Quiz-system-master\Quiz-system-master\TestEdittor\bin\Debug\TestEdittor.pdb
+D:\Git\Projects\Quiz-system-master\Quiz-system-master\TestEdittor\obj\Debug\TestEdittor.csprojResolveAssemblyReference.cache
+D:\Git\Projects\Quiz-system-master\Quiz-system-master\TestEdittor\obj\Debug\TestEdittor.Form1.resources
+D:\Git\Projects\Quiz-system-master\Quiz-system-master\TestEdittor\obj\Debug\TestEdittor.Properties.Resources.resources
+D:\Git\Projects\Quiz-system-master\Quiz-system-master\TestEdittor\obj\Debug\TestEdittor.csproj.GenerateResource.Cache
+D:\Git\Projects\Quiz-system-master\Quiz-system-master\TestEdittor\obj\Debug\TestEdittor.exe
+D:\Git\Projects\Quiz-system-master\Quiz-system-master\TestEdittor\obj\Debug\TestEdittor.pdb
