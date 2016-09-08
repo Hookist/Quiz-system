@@ -10,13 +10,14 @@
 -- 
 -- ---
 
-
+ALTER DATABASE DB_A0CEF4_QuizDB
+COLLATE Ukrainian_CI_AS;  
 		
 CREATE TABLE  Users  (
-   Userid  INTEGER NULL identity  ,
-   FirstName  VARCHAR(128) NOT NULL ,
-   LastName  VARCHAR(128) NOT NULL,
-   Group  VARCHAR(128) NULL  ,
+   Userid  INTEGER  identity  ,
+   FirstName  NVARCHAR(128) NOT NULL ,
+   LastName  NVARCHAR(128) NOT NULL,
+   GroupId  NVARCHAR(128) NULL  ,
   PRIMARY KEY ( Userid )
 );
 
@@ -28,8 +29,8 @@ CREATE TABLE  Users  (
 
 		
 CREATE TABLE  Questions  (
-   Questionid  INTEGER NULL  ,
-   QuestionText  INTEGER(128) NULL  ,
+   Questionid  INTEGER   ,
+   QuestionText  NVARCHAR(128) NULL  ,
    Testsid  INTEGER NULL  ,
    Rate  INTEGER NULL  ,
   PRIMARY KEY ( Questionid )
@@ -43,8 +44,8 @@ CREATE TABLE  Questions  (
 
 		
 CREATE TABLE  Tests  (
-   Testsid  INTEGER NULL  ,
-   TestName  VARCHAR(128) NOT NULL DEFAULT 'NULL',
+   Testsid  INTEGER   ,
+   TestName  NVARCHAR(128) NOT NULL DEFAULT 'NULL',
   PRIMARY KEY ( Testsid )
 );
 
@@ -56,8 +57,8 @@ CREATE TABLE  Tests  (
 
 		
 CREATE TABLE  Answers  (
-   id  INTEGER NULL  ,
-   AnswerText  VARCHAR(128) NULL  ,
+   id  INTEGER  identity(1,1) NOT NULL,
+   AnswerText  NVARCHAR(128) NULL  ,
    isTrue  bit NULL  ,
    Questionid_Questions  INTEGER NULL  ,
   PRIMARY KEY ( id )
@@ -71,7 +72,7 @@ CREATE TABLE  Answers  (
 
 		
 CREATE TABLE  Journal  (
-   id  INTEGER NULL identity  ,
+   id  INTEGER  identity  ,
    Userid_Users  INTEGER NULL  ,
    Testsid_Tests  INTEGER NULL  ,
    Score  INTEGER NULL  ,
