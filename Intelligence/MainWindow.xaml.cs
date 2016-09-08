@@ -47,5 +47,11 @@ namespace Intelligence {
             }
 
         }
+
+        private void Change_Click(object sender, RoutedEventArgs e) {
+            Menu m = new Menu();
+            m.Visibility= Visibility.Visible;
+            this.Close();
+        }
     }
 }

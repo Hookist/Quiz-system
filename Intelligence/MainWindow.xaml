@@ -19,6 +19,7 @@
         <Label x:Name="CountQuest" Content="0\0" HorizontalAlignment="Left" Margin="82,237,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label1" Content="Правильно" HorizontalAlignment="Left" Margin="10,263,0,0" VerticalAlignment="Top" Width="72"/>
         <Label x:Name="TrueQuests" Content="0\0" HorizontalAlignment="Left" Margin="87,263,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Change" Content="Change" HorizontalAlignment="Left" Margin="439,269,0,0" VerticalAlignment="Top" Width="75" Click="Change_Click"/>
 
     </Grid>
 </Window>

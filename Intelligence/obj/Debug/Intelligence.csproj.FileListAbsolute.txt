@@ -26,3 +26,5 @@ D:\Rib\Project1\Quiz-system\Intelligence\obj\Debug\MainWindow.baml
 D:\Rib\Project1\Quiz-system\Intelligence\obj\Debug\Intelligence.g.resources
 D:\Rib\Project1\Quiz-system\Intelligence\obj\Debug\Intelligence.Properties.Resources.resources
 D:\Rib\Project1\Quiz-system\Intelligence\obj\Debug\Intelligence.csproj.GenerateResource.Cache
+D:\Rib\Project1\Quiz-system\Intelligence\obj\Debug\Menu.g.cs
+D:\Rib\Project1\Quiz-system\Intelligence\obj\Debug\Menu.baml
